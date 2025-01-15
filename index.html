@@ -1,1 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Stablecoin Research 2025</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="17347afc-ca4f-8053-81c9-e2554a4bce99" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🪙</span></div><h1 class="page-title">Stablecoin Research 2025</h1><p class="page-description"></p></header><div class="page-body"><p id="17b47afc-ca4f-8044-b950-df2fff17792a" class="">Stablecoins have rapidly become one of the most widely adopted use cases in digital assets, delivering not only DeFi utility but also supporting global monetary stability and geopolitical interests. Stablecoins are already the fastest and cheapest way to send the dollar. Over the past year alone, the market grew by 45%, and analysts predict another 50% increase by 2025. On a global scale, USD stablecoins function like a “layer 2” of the U.S. dollar, broadening access to the world’s reserve currency for millions of users. As new innovations—ranging from Ethena’s stablecoin protocols to Layer 2 issuances and advanced bridging technologies—continue to emerge, the sector shows no sign of slowing down. Yet with maturity comes regulatory scrutiny, which could challenge the longstanding dominance of industry leaders like Tether and Circle. In this presentation, we will explore the key trends driving stablecoin growth and address the pressing questions facing the industry.</p><ul id="17b47afc-ca4f-8056-8604-eaa206138670" class="toggle"><li><details open=""><summary>1. Background: What types of stablecoins exist? (algorithmic, fiat-collateralized, crypto-collateralized), and how do they compare?</summary><ul id="17b47afc-ca4f-8027-80eb-cd1ba448ea3f" class="bulleted-list"><li style="list-style-type:disc"><strong>Algorithmic stablecoins</strong> rely on programmed supply-and-demand adjustments to maintain their peg, often using companion tokens and arbitrage incentives. When demand is low, excess tokens are removed from circulation (burned); when demand rises, new tokens are minted. This model showcases innovative on-chain mechanics but can unravel under heavy market pressure, as seen with TerraUSD (UST) in 2022. Because there is no traditional collateral backing, sudden market shifts can rapidly erode confidence, causing the stablecoin’s price to plummet.</li></ul><ul id="17b47afc-ca4f-80b5-89b4-c5ae9756536c" class="bulleted-list"><li style="list-style-type:disc"><strong>Fiat-collateralized stablecoins</strong> are backed 1:1 by real-world currency reserves—most commonly the U.S. dollar—held by the issuing entity. Tether (USDT) and Circle’s USDC dominate this category, bolstered by regular audits to verify they hold sufficient fiat to cover their circulating supply. While this approach provides price stability and reassurance for users, it also introduces a central point of control: if the issuer fails or manipulates reserves, the stablecoin’s integrity is at risk. Nonetheless, their transparent backing and regulatory compliance make these stablecoins a mainstay for everyday transactions.</li></ul><ul id="17b47afc-ca4f-8036-9943-f743b3abd16a" class="bulleted-list"><li style="list-style-type:disc"><strong>Crypto-collateralized stablecoins</strong> are supported by on-chain crypto assets like Bitcoin or Ethereum, often at higher collateral ratios to counter crypto’s volatility. Protocols such as MakerDAO (referred to as Sky Protocol in some texts) lock collateral in smart contracts, issuing stablecoins in exchange. This decentralized architecture allows real-time transparency and governance through token holders, aligning with the broader Web3 ethos of distributing control. Still, questions about trust, liquidity, and extreme price swings persist, highlighting the tension between decentralized ideals and the practical need for robust safeguards.</li></ul></details></li></ul><ul id="17b47afc-ca4f-807b-83c6-e3261b09bed9" class="toggle"><li><details open=""><summary>2. What is the current state of stablecoins?</summary><p id="17b47afc-ca4f-80fc-99b3-d48c9b2e90e2" class="">The combined market capitalization of all stablecoins has surpassed <strong>$210 billion</strong>, with Tether leading at $<strong>137 billion - </strong>more than triple Circle’s<strong> $45 billion. </strong>Previously the highest market capitalization was $<strong>167 billion</strong>, recorded in March 2022. </p><table id="17b47afc-ca4f-80b1-abf7-ea41f1aa1ca4" class="simple-table"><tbody><tr id="17b47afc-ca4f-8068-9ac9-e325c003b521"><td id="liIb" class="">Rank</td><td id="TLBf" class="">Stablecoin</td><td id="oiFG" class="">Symbol</td><td id="kHSW" class="">Market Cap</td></tr><tr id="17b47afc-ca4f-80f4-b88d-c03b7d521add"><td id="liIb" class="">1</td><td id="TLBf" class="">Tether</td><td id="oiFG" class="">USDT</td><td id="kHSW" class="">137.43 Billion</td></tr><tr id="17b47afc-ca4f-80f7-8fc5-c68bf7c39ba8"><td id="liIb" class="">2</td><td id="TLBf" class="">Circle</td><td id="oiFG" class="">USDC</td><td id="kHSW" class="">45.84 Billion</td></tr><tr id="17b47afc-ca4f-8013-a7f9-d52ff2d42ae6"><td id="liIb" class="">3</td><td id="TLBf" class="">Ethena</td><td id="oiFG" class="">USDE</td><td id="kHSW" class="">5.82 Billion</td></tr><tr id="17b47afc-ca4f-8078-9e2e-eb6c4eb4b704"><td id="liIb" class="">4</td><td id="TLBf" class="">Sky (formerly DAI)</td><td id="oiFG" class="">USDS</td><td id="kHSW" class="">5.81 Billion</td></tr><tr id="17b47afc-ca4f-8057-949b-ee7042a74e86"><td id="liIb" class="">5</td><td id="TLBf" class="">Dai</td><td id="oiFG" class="">DAI</td><td id="kHSW" class="">3.47 Billion</td></tr><tr id="17b47afc-ca4f-80bc-ad4d-e8030d104beb"><td id="liIb" class="">6</td><td id="TLBf" class="">First Digital</td><td id="oiFG" class="">FDUSD</td><td id="kHSW" class="">1.93 Billion</td></tr><tr id="17b47afc-ca4f-8017-9894-e80f813e0ca5"><td id="liIb" class="">7</td><td id="TLBf" class="">Usual</td><td id="oiFG" class="">USD0</td><td id="kHSW" class="">1.86 Billion</td></tr><tr id="17b47afc-ca4f-80ab-8a31-c4b48412fe19"><td id="liIb" class="">8</td><td id="TLBf" class="">sUSDS (formerly sDAI)</td><td id="oiFG" class="">sUSDS</td><td id="kHSW" class="">1.05 Billion</td></tr><tr id="17b47afc-ca4f-805c-9cde-e9c4c9ec7509"><td id="liIb" class="">9</td><td id="TLBf" class="">USDD</td><td id="oiFG" class="">USDD</td><td id="kHSW" class="">749.85 Million</td></tr><tr id="17b47afc-ca4f-8034-8293-d7b044c571b7"><td id="liIb" class="">10</td><td id="TLBf" class="">Tether Gold</td><td id="oiFG" class="">XAUT</td><td id="kHSW" class="">649.74 Million</td></tr></tbody></table><figure id="17b47afc-ca4f-80ac-ba7f-cd5b0ae3ea66" class="image"><a href="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image.png"><img style="width:493.96875px" src="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image.png"/></a></figure><figure id="17b47afc-ca4f-803a-9221-ebad3a4543dc" class="image" style="text-align:center"><a href="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image%201.png"><img style="width:396.97442626953125px" src="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image%201.png"/></a></figure><p id="17b47afc-ca4f-80a8-abd9-f27c3dd3b665" class="">
+</p><ul id="17b47afc-ca4f-8029-9f78-e17d78d7b047" class="bulleted-list"><li style="list-style-type:disc">Notable new entrant is Ethena’s USDe which was launched on the Ethereum network in February 2024 but has already reached close to a 6 billion market cap. Ethena is also partnering with Telegram and plans to integrate their sUSDe into the Telegram messaging app which can make them into a mobile banking type experience. They plan to offer a new iUSDe that aims to bridge TradFi and DeFi markets in Feb 2025. </li></ul><ul id="17b47afc-ca4f-8037-94c2-c6342c037aae" class="bulleted-list"><li style="list-style-type:disc">How and where are stablecoins primarily used?<ul id="17b47afc-ca4f-8003-a4c3-cb6a4e974c94" class="bulleted-list"><li style="list-style-type:circle">While the numbers are not completely known, more than half, probably three-quarters of the use case of stablecoins occurs in cryptocurrency trading. The remaining usage occurs in DeFi, cross boarder payments and remittances, e-commerce and other miscellaneous uses. </li></ul><ul id="17b47afc-ca4f-80fc-b840-e3ae031baf27" class="bulleted-list"><li style="list-style-type:circle">Although cross-boarder payments and remittances currently account for only a small share, they are expected to grow particularly as legal clarity arises and well-funded institutions enter the market. In fact, several established players are now rolling out their own stablecoins (e.g. PUSD, RLUSD), intensifying competition in an already crowded market. This will likely create an environment where name recognition and brand trust, will likely favor incumbents. This dynamic could make it more challenging for new entrants to dent the dominance of Tether and Circle. However as seen with Ethena, new innovative models can succeed despite heavy competition in a crowded market.</li></ul></li></ul><p id="17b47afc-ca4f-809e-8fcb-efc46e9ad16c" class="">With the current hierarchy established, how does the stablecoin infrastructure stack look, and where might new entrants have the greatest impact?</p></details></li></ul><ul id="17b47afc-ca4f-80f6-8d0b-d0e0a26a78b3" class="toggle"><li><details open=""><summary>3. What does the stablecoin infrastructure stack look like - from on-chain to payment processors - and why does it matter?</summary><p id="17b47afc-ca4f-80a8-b860-e18a441268c1" class="">To better pinpoint emerging opportunities, it’s crucial to understand the stablecoin infrastructure stack. I’ve broken it down into three core components.</p><h2 id="17b47afc-ca4f-80b8-83f0-dfced9275a81" class="">On-Chain → Connective Bridge → TradFi</h2><h3 id="17b47afc-ca4f-80ea-9b07-e4464e5d7d38" class="">On-Chain:</h3><ul id="17b47afc-ca4f-80bd-bba2-c068c5f54178" class="bulleted-list"><li style="list-style-type:disc">Stablecoin/Asset Issuers<ul id="17b47afc-ca4f-80db-92b9-f0ce6c647b22" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch:</strong> Innovative stablecoins (e.g., delta neutral models, real world asset collateralization, or full integrated KYC frameworks)</li></ul><ul id="17b47afc-ca4f-8002-aef9-dbb2f40161cf" class="bulleted-list"><li style="list-style-type:circle"><strong>Why Now: </strong>A pro-crypto administration could streamline federal approval processes (bank charters for stablecoin issuers, clear guidance on reserves). A potential SBR on the horizon. Bitcoin’s price rally will draw fresh capital and interest into the broader crypto market - including stablecoins as a “steady gateway”.</li></ul><ul id="17b47afc-ca4f-8089-b49b-f296b34c41e1" class="bulleted-list"><li style="list-style-type:circle"><strong>Examples:</strong><ul id="17b47afc-ca4f-806c-ae62-c941da96dfb3" class="bulleted-list"><li style="list-style-type:square">Ethena’s USDe and RWA-backed stablecoins like Ondo’s USDY represent innovative approaches to yield bearing mechanisms. <ul id="17b47afc-ca4f-805b-9d00-cdf7956a5704" class="bulleted-list"><li style="list-style-type:disc">Ethena’s USDe uses a delta neutral strategy where long positions (e.g., spot ETH) are balanced by short positions (e.g., perpetual contracts), creating stability while generating yield from staking rewards and funding fees from perpetual markets. This model, championed by Arthur Hayes post-Terra collapse, eliminates reliance on traditional fiat instruments like Treasury Bills but introduces risks due to its dependence on centralized exchanges for liquidity. Ethena has inspired similar projects like Elixir and Superstate.</li></ul><ul id="17b47afc-ca4f-8034-8d60-da023e448858" class="bulleted-list"><li style="list-style-type:disc">In contrast, RWA-backed stablecoins, such as Ondo’s USDY, are backed by tokenized real world assets like Treasury Bills, bank deposits and money market funds, benefiting from rising fixed income yields. These centralized stablecoins share a portion of the yield with users, unlike traditional centralized options like USDT and USDC to incentivize adoption. However, they require heavy regulatory compliance, including KYC for minting and redemption. Together these models address the growing demand for yield bearing stablecoins, blending decentralization and traditional finance to offer competitive returns. </li></ul><ul id="17b47afc-ca4f-80e5-84a0-c9c54cda93e7" class="bulleted-list"><li style="list-style-type:disc">Aave and Curve, two major DeFi protocols, have introduce decentralized stablecoins, GHO and crvUSD, respectively, that innovate upon the traditional collateralized debt position (CDP) model pioneered by MakerDAO’s DAI. These protocols allow users to mint stablecoins by depositing collateral, but each adds unique enhancements. Aave’s GHO supports a broad range of collateral through its Aave V3 Ethereum Markets, while Curve’s crvUSD incorporates real-world assets (RWAs) as collateral. Both also include mechanisms for partial liquidation, with crvUSD employing an Automated Market Maker (AMM) for gradual liquidations, unlike fixed liquidation prices. Additionally, all three protocols use Peg Stability Modules (PSM) and 1:1 swap pools to maintain their $1 peg, while also incentivising stablecoin holders through yield mechanisms. Aave furthe provides discounted borrowing rates on GHO for users staking its native token, AAVE.</li></ul></li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-8078-a338-d02de36dee07" class="bulleted-list"><li style="list-style-type:disc">Blockchain Networks<ul id="17b47afc-ca4f-8036-adc6-fc4da28c8517" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch:</strong> Protocols optimized for stablecoin transactions, offering fater throughput and lower costs than mainnet Ethereum.</li></ul><ul id="17b47afc-ca4f-800e-9715-d43e304d920f" class="bulleted-list"><li style="list-style-type:circle"><strong>Investment Angle:</strong><ul id="17b47afc-ca4f-8041-9e8f-fbc15309d923" class="bulleted-list"><li style="list-style-type:square"><strong>L2 scaling</strong> (e.g., zkRollups, optimistic rollups) focusing on stablecoin settlements.<ul id="17b47afc-ca4f-8071-86e1-cb27496f269b" class="bulleted-list"><li style="list-style-type:disc">Ethereum L2s alone had $12.5 billion TVL by the end of 2024</li></ul><ul id="17b47afc-ca4f-80ca-b050-ff75bd42fedc" class="bulleted-list"><li style="list-style-type:disc"><a href="https://x.com/web3_data/status/1868587567844663525">https://x.com/web3_data/status/1868587567844663525</a></li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-804d-8eef-e88ccf909883" class="bulleted-list"><li style="list-style-type:circle">Does L2 favor incumbents like Tether or Circle, or help new entrants?<ul id="17b47afc-ca4f-80fc-8842-ce021fe2a3a3" class="bulleted-list"><li style="list-style-type:square">Incumbent players benefit greatly because they can deploy existing liquidity and brand recognition onto L2s more easily. Since they already dominate the market share and have established trust, continued movement onto L2s could simply extend their reach without significantly increasing their overhead or operational complexity.</li></ul><ul id="17b47afc-ca4f-8092-a62f-e6274c5496dd" class="bulleted-list"><li style="list-style-type:square">New entrants can also benefit because the barriers to entry are lower (transaction costs and speed). A new stablecoin issuer can attract users by offering novel features (RWA collateralization, delta-neutral yield strategies). Additionally positioning oneself as a L2 native can be a unique selling point in a market that otherwise has entrenched leaders on Ethereum mainnet.</li></ul></li></ul><ul id="17b47afc-ca4f-8081-9a1b-f1ae14dcae50" class="bulleted-list"><li style="list-style-type:circle">Will L2s benefit from increased stablecoin issuance?<ul id="17b47afc-ca4f-8002-bd67-ee759f89a701" class="bulleted-list"><li style="list-style-type:square">Likely, yes. The more stablecoins that migrate or launch on an L2, the more transactions and liquidity will move there. Will then lead to increased trading volumes on L2 native DEXs, and more overall economic activity. This will create a virtuous cycle:</li></ul><p id="17b47afc-ca4f-8090-8105-c536a906393e" class="">Issuers deploy on L2 → Users find cheaper, faster stablecoin transfers → Protocols on L2 see increased liquidity → L2 sees higher usage and potentially more revenue if it uses a fee model</p></li></ul></li></ul><ul id="17b47afc-ca4f-80aa-9d56-ff1c0a1d6e30" class="bulleted-list"><li style="list-style-type:disc">Self Custodial Wallets<ul id="17b47afc-ca4f-802a-b663-f485b3f8b18b" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch</strong>: User-friendly wallet experiences that safely integrate stablecoin payments for daily use—like a crypto “Venmo.”</li></ul><ul id="17b47afc-ca4f-805e-9bb5-ebdfb1ddd58e" class="bulleted-list"><li style="list-style-type:circle"><strong>Investment Angle</strong>:<ul id="17b47afc-ca4f-8038-a3fd-e0e3e87d1f59" class="bulleted-list"><li style="list-style-type:square"><strong>Smart contract wallet</strong> solutions with built-in compliance features.</li></ul><ul id="17b47afc-ca4f-807c-bcd0-e278f4d6cc19" class="bulleted-list"><li style="list-style-type:square"><strong>Security &amp; key management</strong> innovations to reduce friction and increase consumer confidence.</li></ul></li></ul></li></ul><h3 id="17b47afc-ca4f-8046-9ca9-c4f2cce0630a" class="">Connective Bridge</h3><ul id="17b47afc-ca4f-8089-b21a-ecac0c64f314" class="bulleted-list"><li style="list-style-type:disc">Custodial Wallets<ul id="17b47afc-ca4f-8038-900b-df317f027547" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch</strong>: Custodial solutions that handle stablecoin issuance/redemption seamlessly. US Markets are likely saturated but <strong>there is still room for new entrants</strong> that can carve out a niche, offer innovative product features, or address underserved markets. Think “Binance meets PayPal,” but for regulated stablecoin usage.</li></ul><ul id="17b47afc-ca4f-8074-a468-dc54605abfd7" class="bulleted-list"><li style="list-style-type:circle"><strong>Investment Angle</strong>:<ul id="17b47afc-ca4f-806f-aeda-ef8ec1936727" class="bulleted-list"><li style="list-style-type:square"><strong>Platform plays</strong> that partner with banks and fintechs to embed stablecoin payment rails.</li></ul><ul id="17b47afc-ca4f-800e-86c5-da76a0439335" class="bulleted-list"><li style="list-style-type:square"><strong>API-first custody</strong> solutions allowing third parties to white-label stablecoin custody and compliance.<ul id="17b47afc-ca4f-806b-927f-ea374be1c25d" class="bulleted-list"><li style="list-style-type:disc">Stripe’s $1.1 Billion acquisition of Bridge is a clear example of the space’s growing importance. Bridge is a platform that provides stablecoin APIs designed to simplify global money movement for developers and businesses. They have orchestration APIs which allow for businesses to seamlessly incorporate stablecoin into their existing financial workflows. They also have an issuance API which allows businesses to issue their own stablecoins although this could face regulatory challenges from HR 4766. They also have a customers API which allows businesses to manage their KYC processes.</li></ul></li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-8005-a53f-c9cd9822a8c8" class="bulleted-list"><li style="list-style-type:disc">On Ramps/Off Ramps<ul id="17b47afc-ca4f-8060-a7bc-f5ce5de528d3" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch</strong>: Payment gateways that convert fiat-to-stablecoin (and vice versa) instantly, with minimal fees.</li></ul><ul id="17b47afc-ca4f-8028-a733-ef0cf13e2562" class="bulleted-list"><li style="list-style-type:circle"><strong>Investment Angle</strong>:<ul id="17b47afc-ca4f-8027-ac83-f61fb5335b5e" class="bulleted-list"><li style="list-style-type:square"><strong>Local and cross-border</strong> ramp solutions that tap into multiple banking partners globally.</li></ul><ul id="17b47afc-ca4f-8076-b8d7-e80348890a2f" class="bulleted-list"><li style="list-style-type:square"><strong>Payment aggregator</strong> platforms that offer near-zero fees to undercut credit card rails.</li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-8063-8662-c68b44c7711f" class="bulleted-list"><li style="list-style-type:disc">Payment Processors/Gateways<ul id="17b47afc-ca4f-8018-8c1d-e2364f72026f" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch</strong>: Next-gen Stripe or PayPal, built natively for stablecoins—enabling merchants to <strong>avoid 2–3% credit card fees</strong>.</li></ul><ul id="17b47afc-ca4f-805b-af8b-e2f812f99b8a" class="bulleted-list"><li style="list-style-type:circle">The integration of stablecoins into payment systems is poised to revolutionize transaction processes by eliminating intermediaries and enhancing efficiency. Credit card companies are actively exploring this space, exemplified by Visa&#x27;s collaboration with Solana to facilitate faster and more cost-effective cross-border settlements using the USDC stablecoin. By reducing the number of intermediaries involved in backend payment processes, stablecoins streamline transactions, enabling near-instantaneous fund transfers.</li></ul><ul id="17b47afc-ca4f-808a-a92e-c31640131658" class="bulleted-list"><li style="list-style-type:circle">However, while stablecoins offer significant advantages for transactions involving physical goods, their application in e-commerce presents challenges, particularly concerning fraud prevention. The irreversible nature of blockchain transactions eliminates the possibility of chargebacks, which, while reducing fraud, also removes a layer of consumer protection against unauthorized purchases. Additionally, the pseudonymous nature of blockchain can complicate the identification of fraudulent actors.</li></ul><figure id="17b47afc-ca4f-80c4-9ee5-ef740c17f979" class="image"><a href="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image%202.png"><img style="width:652px" src="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image%202.png"/></a></figure><ul id="17b47afc-ca4f-808b-86ce-c7868bcd6035" class="bulleted-list"><li style="list-style-type:circle"><strong>Investment Angle</strong>:<ul id="17b47afc-ca4f-80cd-9598-e33717923bd8" class="bulleted-list"><li style="list-style-type:square"><strong>Point-of-sale (PoS) innovations</strong> that accept stablecoins in-store.</li></ul><ul id="17b47afc-ca4f-80e8-ac52-e64aca431204" class="bulleted-list"><li style="list-style-type:square"><strong>Online checkout</strong> solutions that seamlessly integrate stablecoins with e-commerce platforms (Shopify, WooCommerce).</li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-800c-803d-cc3071e6312e" class="bulleted-list"><li style="list-style-type:disc">Compliance and Regulatory Infrastructure<ul id="17b47afc-ca4f-8063-a10a-f72d80b43a51" class="bulleted-list"><li style="list-style-type:circle"><strong>What to Watch</strong>: Tools for seamless KYC/AML, tax reporting, and cross-border regulatory compliance—for both issuers and merchants.</li></ul><ul id="17b47afc-ca4f-8065-8362-f8798d49abdc" class="bulleted-list"><li style="list-style-type:circle"><strong>Investment Angle</strong>:<ul id="17b47afc-ca4f-806a-83fe-ca7a57d2001c" class="bulleted-list"><li style="list-style-type:square"><strong>RegTech platforms</strong> that automate compliance across jurisdictions.</li></ul><ul id="17b47afc-ca4f-8061-aa92-c70045d8b7a6" class="bulleted-list"><li style="list-style-type:square"><strong>Identity solutions</strong> (digital IDs, zero-knowledge proofs) that satisfy regulators without sacrificing user privacy.</li></ul></li></ul></li></ul></details></li></ul><ul id="17b47afc-ca4f-8060-9a62-d8e5f571a579" class="toggle"><li><details open=""><summary>4. How will the incoming administration and pending legislation (e.g., H.R. 4766, FIT21) alter the stablecoin landscape?</summary><ul id="17b47afc-ca4f-8076-bdf9-c62a77863b5d" class="bulleted-list"><li style="list-style-type:disc">H.R. 4766 Clarity for Payment Stablecoins Act - The stablecoin legislation that will create a legal framework for regulating “payment stablecoins” limiting who can legally issue them, imposing reserve requirements and establishing compliance obligations around audits, redemption and consumer protection.<ul id="17b47afc-ca4f-80e7-a1d0-f95518f4b04e" class="bulleted-list"><li style="list-style-type:circle">Why this matters for BCAP - if enacted, the legislation would <strong>fundamentally reshape</strong> the stablecoin market by creating a licensing requirement for issuers, restricting “endogenously collateralized” stablecoins, and <strong>explicitly removing</strong> payment stablecoins from the definition of “securities” or “commodities” under federal securities laws. A new compliance regime may <strong>favor well-capitalized or well-structured issuers</strong> and infrastructure players like TradFi banks, while <strong>raising barriers</strong> for smaller entrants.</li></ul><ul id="17b47afc-ca4f-8037-8440-d891fd409557" class="bulleted-list"><li style="list-style-type:circle">Important Takeaways from H.R. 4766<ul id="17b47afc-ca4f-80ad-8884-e54ab23e882d" class="bulleted-list"><li style="list-style-type:square">Stablecoin issuers will need to get explicit approval (federally or by a state) to issue payment stablecoins. Subsidiaries of an insured depository institution (e.g., a bank’s subsidiary) or a Federal Qualified Nonbank Payment Stablecoin Issuer or a State Qualified Payment Stablecoin Issuer can be a permitted payment stablecoin issuer. A nonbank entity that obtains federal approval from one of the “primary federal payment stablecoin regulators” (Fed, OCC, FDIC, NCUA). It will be illegal to issue SCs without license.</li></ul><ul id="17b47afc-ca4f-801a-85b2-eaae96bb8100" class="bulleted-list"><li style="list-style-type:square">The Approval Process is as follows. Nonbank applicants must file with their primary federal payment stablecoin regulator, which evaluates capital, liquidity, management fitness, and consumer risk/benefit. A 120 day review clock starts once the regulator deems an application complete. If the regulator does not approve or deny the application within this timeframe, the application is automatically approved.<ul id="17b47afc-ca4f-8035-9753-f2a6aa852150" class="bulleted-list"><li style="list-style-type:disc">Permitted reserves include U.S. coins and currency, funds held as insured demand deposits, Treasury bills with maturities of 90 days or less, and other assets deemed appropriate by regulators.</li></ul><ul id="17b47afc-ca4f-80bc-a55f-e33c411d1e9a" class="bulleted-list"><li style="list-style-type:disc">It&#x27;s important to note that while automatic approval is granted if the deadline is missed, regulators retain the authority to supervise and enforce compliance with applicable laws and regulations post-approval. Therefore, maintaining adherence to all regulatory requirements remains essential for nonbank stablecoin issuers.</li></ul></li></ul><ul id="17b47afc-ca4f-80dc-89c0-f19922048160" class="bulleted-list"><li style="list-style-type:square">Permitted Issuers can only engage in:<ul id="17b47afc-ca4f-809e-9aad-d552dfd0ca1b" class="bulleted-list"><li style="list-style-type:disc">Issuing and redeeming stablecoins</li></ul><ul id="17b47afc-ca4f-805a-94f6-fb5c5906c33d" class="bulleted-list"><li style="list-style-type:disc">Managing reserves</li></ul><ul id="17b47afc-ca4f-802e-b7a3-d188d4c9baef" class="bulleted-list"><li style="list-style-type:disc">Providing custodial or safekeeping services</li></ul><ul id="17b47afc-ca4f-80be-a308-d5d3f463d89d" class="bulleted-list"><li style="list-style-type:disc">Activities directly supporting stablecoin issuance</li></ul><ul id="17b47afc-ca4f-800b-ab47-df17d732c3f7" class="bulleted-list"><li style="list-style-type:disc"><em>Implications: issuers cannot easily pivot into other DeFi or crypto lines. It restricts scope.*</em></li></ul></li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-804d-98b2-ed4a568e3834" class="toggle"><li><details open=""><summary>H.R. 4763 Financial Innovation and Technology for the 21st Century Act (FIT21)</summary><ul id="17b47afc-ca4f-8082-aac5-f1b88d58ac84" class="toggle"><li><details open=""><summary>A note on FIT21: Although passed by the House in May 2024, the bill did not clear the Senate, meaning the legislative process must restart in the new congressional session. Nonetheless, FIT21 may become increasingly relevant under the next administration, as it offers important insights into how Congress could regulate digital assets—specifically, it exempts stablecoins from classification as either commodities or securities. For a more detailed discussion of securities and commodities laws concerning digital assets, you can refer to this in-depth analysis <a href="https://docs.google.com/document/d/1vLzRRhU5k_vC_NhpIum3oiMOfQ2SWgFQ/edit?usp=sharing&amp;ouid=118026414601621049815&amp;rtpof=true&amp;sd=true">here</a>.</summary></details></li></ul><ul id="17b47afc-ca4f-8061-9d84-c09c9719c8d7" class="bulleted-list"><li style="list-style-type:disc">The legislation marks digital assets as either securities or commodities. The digital asset will be considered a security if it meets all of the prongs of the Howey Test (1. There is an investment of money, 2. in a common enterprise, 3. with an expectation of profits, 4. derived primarily from the efforts of others.). If these prongs are met then it will be considered as a security during its offering phase. As seen, if these assets are considered securities that makes it inherently difficult for the project to thrive as these projects are decentralized with no centralized wellhead to comply with the rules of the SEC.</li></ul><ul id="17b47afc-ca4f-8043-bd12-f1891763bab5" class="bulleted-list"><li style="list-style-type:disc">A digital asset can transition from being classified as a security to a commodity if it demonstrates a sufficient level of decentralization and no longer relies on the efforts of a central party to drive its value. The act outlines a “decentralization test, which assesses factors such as:<ul id="be91857f-8774-4c28-81dc-9fcecac1a558" class="bulleted-list"><li style="list-style-type:circle">The degree to which the blockchain or network operates independently of a central authority</li></ul><ul id="fd4c5169-8219-4bb0-8bf1-6471534a09d2" class="bulleted-list"><li style="list-style-type:circle">Whether the network’s governance is decentralized and controlled by a diverse group of stakeholders</li></ul><ul id="146ea3be-172d-49c3-9984-cdeec53653cd" class="bulleted-list"><li style="list-style-type:circle">The extent to which the network and its participants can function autonomously</li></ul></li></ul><ul id="17b47afc-ca4f-80ad-877d-ff781d0450f7" class="bulleted-list"><li style="list-style-type:disc">Implications for Crypto Projects<ul id="3e5e42bd-78be-4173-b824-e607d20c2c3b" class="bulleted-list"><li style="list-style-type:circle">Early projects will likely be categorized as securities until they reach sufficient decentralization</li></ul><ul id="8511b2dc-642a-4638-bfc3-625e8aa9cb1e" class="bulleted-list"><li style="list-style-type:circle">Mature Projects such as BTC, ETH, Solana, etc. which operate on decentralized networks with broad community governance, would typically qualify as commodities which are not subject to registration requirements under the CFTC.</li></ul></li></ul><ul id="17b47afc-ca4f-8003-b576-f3828195244b" class="bulleted-list"><li style="list-style-type:disc">The test will need to be more clearly clarified as the CFTC and SEC go through a notice and comment period to introduce binding rules that will take several months to a year to then define terms like<ul id="530d5544-77b8-42c5-8870-b41b4fa98e3d" class="bulleted-list"><li style="list-style-type:circle">Decentralized governance - whether decision making power is distributed</li></ul><ul id="596b9bfe-396a-494c-b161-153a470154ec" class="bulleted-list"><li style="list-style-type:circle">Network Independence - the degree to which the blockchain network can operate autonomously without reliance on a central party</li></ul><ul id="832d6bb0-eea7-45aa-9ac0-b7a031b5633c" class="bulleted-list"><li style="list-style-type:circle">Economic Control</li></ul><ul id="4b02b473-47fb-4a06-9d0d-8cde1ec01ceb" class="bulleted-list"><li style="list-style-type:circle">Transparency and Participation</li></ul></li></ul></details></li></ul></details></li></ul><ul id="17b47afc-ca4f-80ea-be3a-d5d22eb6de0b" class="toggle"><li><details open=""><summary>5. Who stands to gain or lose under new regulatory frameworks, and how might banks enter the market?</summary><ul id="17b47afc-ca4f-80f2-8df5-ed5c0bbe778e" class="bulleted-list"><li style="list-style-type:disc"><strong>WINNERS AND LOSERS:</strong><ul id="17b47afc-ca4f-8007-8a4f-c7a424a4e606" class="bulleted-list"><li style="list-style-type:circle">Winners:<ul id="17b47afc-ca4f-80b6-b69e-d7fd50177645" class="bulleted-list"><li style="list-style-type:square">Incumbent/Bank-Affiliated Issuers will benefit the most from this legislation. Players that already have robust compliance departments, capital and relationships with regulators will be able to smoothly integrate and comply with H.R. 4766. Subsidiaries of large banks can also integrate stablecoin issuance under exiting federal oversight</li></ul><ul id="17b47afc-ca4f-8019-be96-e836033e0c8e" class="bulleted-list"><li style="list-style-type:square">Well-Capitalized Nonbank Issuers: Entities like Circle or other large stablecoin issuers that can quickly adapt to heightened reserve, disclosure and licensing requirements</li></ul></li></ul><ul id="17b47afc-ca4f-80b5-9613-ddf6f969fdd0" class="bulleted-list"><li style="list-style-type:circle">Losers:<ul id="17b47afc-ca4f-80ec-9616-c1d3be5a07f7" class="bulleted-list"><li style="list-style-type:square">Endogenously Collateralized Stablecoins: 2 year moratorium on new purely algorithmic stablecoins, referencing Terra-like models that rely solely on the value of another asset from the same issuer. During this moratorium, existing algorithmic stablecoins can continue to operate, but no new ones of this type can be issued. The goal is to develop a comprehensive regulatory framework that addresses potential vulnerabilities in the stablecoin market, ensuring consumer protection and financial stability.</li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-80a7-93cb-e1c8719c437a" class="bulleted-list"><li style="list-style-type:disc"><strong>Yes, Banks Will Likely Launch Their Own Stablecoins</strong><ul id="17b47afc-ca4f-805f-8317-fa459687b7ae" class="bulleted-list"><li style="list-style-type:circle">The new legislation establishes a framework allowing banks to become “permitted payment stablecoin issuers” while remaining compliant with securities and commodities laws. In doing so, it is likely to heighten competition in the stablecoin market by placing greater emphasis on marketing, branding, trust, and liquidity. With banks now authorized to issue stablecoins, providers will seek to differentiate themselves through brand reputation, consumer confidence, and the depth of their liquidity. This intensified competition is expected to spur innovation and improve the overall quality of stablecoin offerings.</li></ul><ul id="17b47afc-ca4f-8043-ab2f-d888e89ec679" class="bulleted-list"><li style="list-style-type:circle">However, NOT One Size Fits All:<ul id="17b47afc-ca4f-8020-bc39-cbf8e39902c3" class="bulleted-list"><li style="list-style-type:square">Some banks might opt for private or permissioned blockchains (like JPMorgan’s Onyx) to maintain more control and reduce public exposure of transactions.</li></ul></li></ul></li></ul><ul id="17b47afc-ca4f-8094-82ce-cb4262552d31" class="bulleted-list"><li style="list-style-type:disc">What will happen to the other businesses that Circle and Tether do besides Stablecoin issuance under H.R. 4766?<ul id="17b47afc-ca4f-80de-92ad-fff627f77b97" class="bulleted-list"><li style="list-style-type:circle">In theory, a firm like Circle could create a dedicated H.R. 4766 compliant entity for stablecoin issuance and keep DeFi activities in a separate subsidiary. However such an approach demands careful corporate structuring like separate boards to have genuinely “arms-length” entities with minimal shared operations or overlapping personnel and strict compliance firewalls to not indirectly do what the law prohibits them from doing indirectly. However if regulators perceive the structure as an attempt to circumvent the statute’s intent, enforcement actions could follow.</li></ul></li></ul><ul id="17b47afc-ca4f-8057-bdff-c200a74856c0" class="bulleted-list"><li style="list-style-type:disc">How does this impact the hierarchy of the stablecoin issuers?<ul id="17b47afc-ca4f-8057-82b3-f8414db4b53d" class="bulleted-list"><li style="list-style-type:circle">Tether has recently demonstrated reluctance to align with regulations like MiCA, shifting its focus to Latin America and moving its headquarters to El Salvador. Meanwhile, Tether leadership notes that Cantor Fitzgerald holds a significant portion of the company’s reserves—a relationship made more noteworthy now that Cantor’s former CEO is slated to become the U.S. Secretary of Commerce. It remains unclear how Tether will navigate U.S. regulations going forward.</li></ul><ul id="17b47afc-ca4f-8046-8535-c0ba3bcd2a64" class="bulleted-list"><li style="list-style-type:circle">In contrast, Circle is gaining market share by proactively complying with regulatory frameworks, relocating its headquarters to New York City, and preparing for a 2025 IPO. Should Tether continue to resist stricter oversight, Circle may further solidify its position. Simultaneously, traditional banks are poised to roll out their own stablecoins; they could either compete directly with Tether and Circle or broaden the overall market by attracting new users. The latter scenario appears more likely if forthcoming legislation legitimizes crypto, prompting banks to view stablecoins as a viable revenue stream. Ultimately, with multiple entities launching stablecoins, those that can demonstrate both trustworthiness and competitive offerings stand the best chance of success.</li></ul></li></ul></details></li></ul><ul id="17b47afc-ca4f-80b3-9f26-e65274cdc7c4" class="toggle"><li><details open=""><summary>6. A side by side comparison of MiCA and H.R. 4766 and the effect it could have on global stablecoin adoption and competition.</summary><ul id="17b47afc-ca4f-80fc-a5b7-ddf4bc2c0da9" class="bulleted-list"><li style="list-style-type:disc">MiCA<ul id="17b47afc-ca4f-8009-b1ea-eb071e385ec8" class="bulleted-list"><li style="list-style-type:circle">The European Union&#x27;s Markets in Crypto-Assets (MiCA) regulation, effective December 30, 2024, imposes stringent compliance requirements on stablecoin issuers, including obtaining e-money licenses and maintaining specific reserve standards.</li></ul></li></ul><ul id="17b47afc-ca4f-807c-93eb-ec176d25954b" class="bulleted-list"><li style="list-style-type:disc">MiCA v. H.R 4766 Side by Side Comparison</li></ul><table id="17b47afc-ca4f-807a-86fa-fb8639540afd" class="simple-table"><tbody><tr id="17b47afc-ca4f-80f7-bb6c-c599eccc385e"><td id="Wg|E" class=""></td><td id="\imd" class="">MiCA (EU)</td><td id="PB?b" class="">H.R. 4766</td></tr><tr id="17b47afc-ca4f-8040-958c-f5910a667cdf"><td id="Wg|E" class=""></td><td id="\imd" class="">Passed into law, with full enforcement that began in December 30, 2024.</td><td id="PB?b" class="">Proposed legislation (passed by House Financial Services Committee in 2024 but will have to restart). Could be enacted this legislative term.</td></tr><tr id="17b47afc-ca4f-80f0-8321-e616b7259d6f"><td id="Wg|E" class="">License</td><td id="\imd" class="">E-Money License must be acquired for stablecoin issuance in EU.</td><td id="PB?b" class="">Federal or State License from a “primary federal payment stablecoin regulator” or state level authority</td></tr><tr id="17b47afc-ca4f-800a-b6b1-cb126a0e80f5"><td id="Wg|E" class="">Reserve Requirement</td><td id="\imd" class="">Must maintain full reserves and comply with stringent reserve and liquidity standards.</td><td id="PB?b" class="">Requires 100% reserve backing in highly liquid assets. Mandates regular audits.</td></tr><tr id="17b47afc-ca4f-8017-9271-f556ca87a8a0"><td id="Wg|E" class="">Redemption &amp; Consumer Protections</td><td id="\imd" class="">Mandatory redemption right for holders; must allow near immediate redemption. Clear obligations for consumer protection, including transparency about issuer identity, reserves, risks, etc.</td><td id="PB?b" class="">Requires clear redemption policies and consumer protections. Issuers can engage only in stablecoin-related activities</td></tr><tr id="17b47afc-ca4f-8055-963a-dc3888c2c2cc"><td id="Wg|E" class="">Transparency and Disclosure</td><td id="\imd" class="">Whitepaper with thorough disclosure of risks, governance, and reserve assets required. Ongoing updates and audits under the supervision of national or EU authorities.</td><td id="PB?b" class="">Audits and public disclosure to prove 1:1 backing; Potentially stricter operational transparency.</td></tr><tr id="17b47afc-ca4f-807e-818b-edbcc61c4b81"><td id="Wg|E" class="">Scope Restrictions</td><td id="\imd" class="">Large scale stablecoins may face additional supervisory measures due to systemic risk concerns</td><td id="PB?b" class="">Permitted issuers cannot easily pivot into other DeFi or crypto businesses; must remain focused on stablecoin issuance and directly related activities.</td></tr><tr id="17b47afc-ca4f-8034-990d-cfe9fbe8eccd"><td id="Wg|E" class="">Treatment of Algorithmic/Endogenous Models</td><td id="\imd" class="">Primarily focuses on fully backed or asset referenced tokens; pure algorithmic stablecoins face stricter scrutiny but are not outright banned</td><td id="PB?b" class="">2 year moratorium on new “endogenously collateralized stablecoins” that rely on another asset from the same issuer.</td></tr><tr id="17b47afc-ca4f-80a5-b2bf-ea37faace017"><td id="Wg|E" class="">Approval Process Deadlines</td><td id="\imd" class="">No automatic approval if the regulator misses a deadline; issuers must obtain explicit authorization prior to launching in the EU.</td><td id="PB?b" class="">120-day clock for review once application is deemed incomplete. If the regulator fails to respond, issuer is automatically approved but still subject to oversight</td></tr><tr id="17b47afc-ca4f-8042-88d1-f8ecaef3543f"><td id="Wg|E" class="">Impact on Incumbents v. Startups</td><td id="\imd" class="">Favors well funded, heavily regulated entities who can afford compliance.</td><td id="PB?b" class="">Favors banks and larger nonbank players (like circle) with strong compliance resources. Startups face higher barriers due to licensing and capital requirements.</td></tr></tbody></table><ul id="17b47afc-ca4f-8022-815b-ecd135d6625c" class="bulleted-list"><li style="list-style-type:disc">Why Tether Might Struggle Under Both Regimes<ul id="17b47afc-ca4f-803b-942a-d924502dd659" class="bulleted-list"><li style="list-style-type:circle">Licensing Concerns: Tether, the issuer of USDT, has not secured such a license under MiCA, leading to significant developments in the European crypto market. USDT has faced scrutiny under these regulations, leading to its delisting from several European exchanges. In mid-December 2024, Coinbase proactively delisted USDT for EU customers, citing compliance concerns related to MiCA. Reports indicate that Tether&#x27;s market cap dropped by approximately $2 billion within a 24-hour period around the end of December 2024. Other exchanges, such as Binance and Crypto.com, have continued to list USDT while awaiting explicit guidance from EU regulators. The delisting of USDT, a major stablecoin with significant liquidity, has raised concerns about potential disruptions in the European crypto market, with traders facing challenges due to reduced access to USDT trading pairs. For reference, Central, Northern, and Western Europe (CNWE) is the second-largest cryptocurrency economy, accounting for 17.6% of global transaction volume between July 2022 and June 2023, with an estimated $1 trillion in on-chain value during that period. The region has experienced substantial growth in cryptocurrency adoption, with a 44% year-over-year increase in activity, reflecting a rapidly expanding market.</li></ul><figure id="17b47afc-ca4f-805e-b6db-f5921d7e09a3" class="image"><a href="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image%203.png"><img style="width:651.984375px" src="Stablecoin%20Research%202025%2017347afcca4f805381c9e2554a4bce99/image%203.png"/></a></figure><ul id="17b47afc-ca4f-8003-86f0-cc5c50c5043e" class="bulleted-list"><li style="list-style-type:circle">Reserve Transparency: Both MiCA and 4766 demand detailed proof of 1:1 backing, historically a sticking point for tether, which has faced scrutiny</li></ul><ul id="17b47afc-ca4f-8050-ae69-e73b13322cf0" class="bulleted-list"><li style="list-style-type:circle">Consumer Redemption and Protections: Each framework holds issuers to strict redemption timelines and consumer protection standards, so Tether must adapt its redemption model to comply with new laws.</li></ul></li></ul><ul id="17b47afc-ca4f-802c-b487-ffe94d8c5471" class="bulleted-list"><li style="list-style-type:disc">Does this open the door for other issuers to increase their market share?<ul id="17b47afc-ca4f-80ff-ad21-e51e3cd31f7b" class="bulleted-list"><li style="list-style-type:circle">If Tether fails to comply with MiCA or H.R. 4766, the door opens for both existing and new issuers to capture market share. Large banks and regulated fintechs, with their established compliance capabilities, are well-positioned to take advantage of this shift. Additionally, if traditional banks begin issuing stablecoins, they may inevitably be drawn into broader DeFi activities—potentially infusing the crypto ecosystem with substantial capital, confidence, and stability.</li></ul></li></ul></details></li></ul><p id="17b47afc-ca4f-8037-8169-fa4a88dbd9c0" class="">
+</p><p id="17b47afc-ca4f-8030-8c37-f3cd62386bf6" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
